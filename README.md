@@ -23,9 +23,9 @@ A web application for creating and managing a personal to-do list. This applicat
 
 #### Setting Up the Backend
 - Open a new terminal window and run the following command to create a new project directory:
-<pre><code>mkdir django-todo-react</code></pre>
+<pre><code>mkdir Todo-app</code></pre>
 - Next, navigate into the directory:
-<pre><code>cd django-todo-react</code></pre>
+<pre><code>cd Todo-app</code></pre>
 - Now install Pipenv using pip:
 <pre><code>pip install pipenv</code></pre>
 - And activate a new virtual environment:
@@ -39,6 +39,8 @@ A web application for creating and managing a personal to-do list. This applicat
 - Start a new application called todo:
 <pre><code>python manage.py startapp todo</code></pre>
 - Run migrations:
+<pre><code>python manage.py migrate</code></pre>
+- And To create a super user:
 <pre><code>python manage.py migrate</code></pre>
 - And start up the server:
 <pre><code>python manage.py runserver</code></pre>
