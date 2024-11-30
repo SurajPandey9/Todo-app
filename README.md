@@ -1,9 +1,15 @@
 
-
+# FOR ANY QUERY VISIT MY ANOTHER GITHUB PROFILE @surcs18
 # To-Do List Application
 
 ## Description
 A web application for creating and managing a personal to-do list. This application has both frontend and backend components, uses a database for data persistence, and exposes APIs for interacting with the data.
+## PREREQUISITES
+you must have:
+
+Set up a local programming environment for python3
+
+Set up Node.js on your Local Development Environment.
 
 ## Technologies
 - **Frontend:** React
@@ -39,13 +45,26 @@ A web application for creating and managing a personal to-do list. This applicat
 - Start a new application called todo:
 <pre><code>python manage.py startapp todo</code></pre>
 - Run migrations:
+<pre><code>python manage.py makemigrations</code></pre>
 <pre><code>python manage.py migrate</code></pre>
-- And To create a super user:
-<pre><code>python manage.py migrate</code></pre>
+- The next step is to create a "superuser" account to access the admin interface. Run the command in the terminal::
+<pre><code>python manage.py createsuperuser</code></pre>
+This command sends a prompt that requests for 'username', 'email address', and 'password'.Enter a username and password you will remember because you will use it to log into the admin dashboard interface
 - And start up the server:
 <pre><code>python manage.py runserver</code></pre>
+Navigate to the link http://localhost:8000/admin in your browser to access the admin interface and log in with the username and password you created earlier.
 Navigate to http://localhost:8000 in your web browser:
 <br>
+It is now possible to CRUD the Todo items from this dashboard.
+
+You can now add items to the admin dashboard.
+### SETTING UP APIs
+
+In this part, Django REST framework will be used to create the API(Application Programming Interface).
+While still in the virtual environment, install the djangorestframework and django cross origin resource sharing headers with the commands:
+<pre><code>pipenv install djangorestframework django-cors-headers</code></pre>
+
+
 
 #### Setting Up the Frontend
 - To set up the frontend, this tutorial will rely upon Create React App. 
@@ -61,6 +80,9 @@ One approach is to use npx to run the package and create the project:
 - Finally install:
 <pre><code>npm install axios@0.21.1</code></pre>
 
-### Additional Notes :
+### Additional Most Important Notes :
 <li>We need two Terminals one for Backend and another for frontend </li>
-<li>We first run the backend server and then the Frontend server</li>
+<li>We first run the backend server and it must necessary to run always before frontend server  and then run the Frontend server</li>
+<li>we run two server at same time http://localhost:8000/admin for backend and http://localhost:3000 for frontent and our data store on http://localhost:8000/admin</li>
+<li>for admin login you must have username and password which enter during after createsuperuser command </li>
+
